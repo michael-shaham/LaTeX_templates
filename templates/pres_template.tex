@@ -1,0 +1,148 @@
+\documentclass[mathserif]{beamer}
+\usepackage{pres_style}
+
+%% Title slide
+% ------------------------------------------------------------------------------ %
+\title[Presentation Template] % optional, depends on theme
+{\bfseries Presentation Template}
+
+% \subtitle{If desired}
+
+\author[Shaham, Michael] % optional, for multiple authors, depends on theme
+{Michael~H.~Shaham\inst{1} \and Taskin~Padir\inst{2}}
+
+\institute[NU] % optional, depends on theme
+{
+  \inst{1}%
+  RIVeR Lab\\
+  Northeastern University
+  \and
+  \inst{2}%
+  Director, Institute for Experiential Robotics\\
+  Northeastern University
+}
+
+\date[Conf 2022] % optional, depends on theme
+{Conference name maybe?, \monthyeardate\today} % use \today if you want most updated date
+
+% probably don't want to include a logo but here it is just in case
+% \logo{\includegraphics[height=1cm]{pictures/NU_MonoNU_RGB_BB.png}}
+% \logo{\includegraphics[height=1cm]{pictures/RIVeR-logo-large.png}}
+
+\titlegraphic{
+\includegraphics[height=1.2cm]{pictures/RIVeR-logo-large.png}
+% \hfill
+% \includegraphics[height=1.8cm]{pictures/NU_MonoNU_RGB_BB.png}
+}
+% ------------------------------------------------------------------------------ %
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{General tips}
+
+\begin{frame}
+\frametitle{Writing\\[-0.3em] 
+{\footnotesize \textmd{(Strunk and White, 1957 \cite{SW:57})}}}
+Write good English \cite{SW:57}. 
+
+This slide shows two ways you can cite the work of others.
+\end{frame}
+
+\section{Breaking up frames}
+
+\begin{frame}
+\frametitle{Multiple slides for bullets example}
+\begin{itemize}
+    \item<1-> Text visible on slides 1-3
+    \item<2> Text visible only on slide 2
+    \item<3-> Text visible on slide 3
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pausing example}
+In this slide \pause
+
+the text will be partially visible \pause
+
+And finally everything will be there
+\end{frame}
+
+\section{Emphasis}
+
+%Highlighting text
+\begin{frame}
+\frametitle{Highlighting text example}
+In this slide, some important text will be
+\alert{highlighted} because it's important.
+Please, don't abuse it.
+\end{frame}
+
+\begin{frame}{Boxes}
+
+\begin{block}{Remark}
+Sample text
+\end{block}
+
+\begin{alertblock}{Important theorem}
+Sample text in red box
+\end{alertblock}
+
+\begin{examples}
+Sample text in green box. The title of the block is ``Examples".
+\end{examples}
+\end{frame}
+
+\begin{frame}{Math stuff}
+\begin{definition}[A variable definition]<1->
+A = B.
+\end{definition}
+
+\begin{theorem}[Very important]<2->
+B = A.
+\end{theorem}
+
+\begin{proof}<3->
+Simple. 
+\end{proof}
+% Options are theorem, corollary, definition, definitions, fact, example, and examples
+\end{frame}
+
+\section{Columns}
+
+\begin{frame}
+\frametitle{Two-column slide}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+This text is in the first column.
+$$E=mc^2$$
+\begin{itemize}
+\item First item
+\item Second item
+\end{itemize}
+
+\column{0.5\textwidth}
+This text will be in the second column
+and on a second tought this is a nice looking
+layout in some cases.
+\end{columns}
+\end{frame}
+
+\section*{References}
+
+\begin{frame}[allowframebreaks]
+\frametitle{References}
+    % \nocite{*}
+    \bibliographystyle{ieeetr}
+    \bibliography{refs/refs}
+\end{frame}
+
+\end{document}
