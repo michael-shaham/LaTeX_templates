@@ -57,17 +57,19 @@
 
 \newcommand{\ones}{\mathbf 1}
 % \newcommand{\reals}{{\mbox{\bf R}}}
-\newcommand{\reals}{\textbf{R}}
+% \newcommand{\reals}{\textbf{R}}
+\newcommand{\reals}{\mathbb{R}}
 % \newcommand{\integers}{{\mbox{\bf Z}}}
-\newcommand{\integers}{\textbf{Z}}
+% \newcommand{\integers}{\textbf{Z}}
+\newcommand{\integers}{\mathbb{Z}}
 % \newcommand{\symm}{{\mbox{\bf S}}}  % symmetric matrices
 \newcommand{\symm}{\textbf{S}}
 
-\newcommand{\Null}{{\mathcal N}}
-\newcommand{\range}{{\mathcal R}}
+\newcommand{\Null}{\mathop{\bf null}}
+\newcommand{\range}{\mathop{\bf range}}
 \newcommand{\rank}{\mathop{\bf rank}}
 \newcommand{\Dim}{\mathop{\bf dim}}
-\newcommand{\Tr}{\mathop{\bf Tr}}
+\newcommand{\tr}[1]{\mathop{\bf tr} \hspace{-2pt} \left(#1\right)}
 \newcommand{\diag}{\mathop{\bf diag}}
 \newcommand{\Span}{\mathop{\bf span}}
 \newcommand{\card}{\mathop{\bf card}}
@@ -76,7 +78,8 @@
 \newcommand{\prox}{\mathbf{prox}}
 
 \newcommand{\Expect}{\mathop{\bf E{}}}
-\newcommand{\prob}{\mathop{\bf prob}}
+\newcommand{\prob}[1]{\mathop{\bf prob}(#1)}
+\newcommand{\probb}[1]{\mathop{\bf prob}\left(#1\right)}
 \newcommand{\Co}{{\mathop {\bf Co}}} % convex hull
 \newcommand{\dist}{\mathop{\bf dist{}}}
 \newcommand{\argmin}{\mathop{\rm argmin}}
@@ -172,14 +175,16 @@
 % Probability/expectation operators.  The ones ending in x should be used if you want
 % subscripts that go directly *below* the operator (in math mode); no x means the subscripts
 % go below and to the right.  NB:  \P is remapped below for the complexity class P.
-\renewcommand{\Pr}{{\bf P}}
-\newcommand{\Prx}{\mathop{\bf Pr\/}}
-\newcommand{\E}{{\bf E}}
-\newcommand{\Ex}{\mathop{\bf E\/}}
-\newcommand{\Var}{{\bf Var}}
-\newcommand{\Varx}{\mathop{\bf Var\/}}
-\newcommand{\Cov}{{\bf Cov}}
-\newcommand{\Covx}{\mathop{\bf Cov\/}}
+\renewcommand{\Pr}[1]{{\bf P}\left(#1\right)}
+\newcommand{\Prx}[1]{\mathop{\bf Pr}{\left(#1\right)}}
+
+\newcommand{\E}[1]{{\bf E}{\left(#1\right)}}
+\newcommand{\Ex}[1]{\mathop{\bf E}{\left(#1\right)}}
+\newcommand{\var}[1]{{\bf var} \hspace{-2pt} \left(#1\right)}
+\newcommand{\varr}[1]{{\bf var}\left(#1\right)}
+\newcommand{\varx}[1]{\mathop{\bf var}\left(#1\right)}
+\newcommand{\cov}[1]{{\bf cov} \hspace{-2pt} \left(#1\right)}
+\newcommand{\covx}[1]{\mathop{\bf cov}\left(#1\right)}
 
 % shortcuts for symbol names that are too long to type
 \newcommand{\eps}{\epsilon}
