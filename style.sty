@@ -63,7 +63,7 @@
 % \newcommand{\integers}{\textbf{Z}}
 \newcommand{\integers}{\mathbb{Z}}
 % \newcommand{\symm}{{\mbox{\bf S}}}  % symmetric matrices
-\newcommand{\symm}{\textbf{S}}
+\newcommand{\symm}{\mathbb{S}}
 
 \newcommand{\Null}{\mathop{\bf null}}
 \newcommand{\range}{\mathop{\bf range}}
@@ -178,8 +178,9 @@
 \renewcommand{\Pr}[1]{{\bf P}\left(#1\right)}
 \newcommand{\Prx}[1]{\mathop{\bf Pr}{\left(#1\right)}}
 
-\newcommand{\E}[1]{{\bf E}{\left(#1\right)}}
-\newcommand{\Ex}[1]{\mathop{\bf E}{\left(#1\right)}}
+\newcommand{\E}[1]{{\bf E}{\left[#1\right]}}
+\newcommand{\Ex}[1]{\mathop{\bf E}{\left[#1\right]}}
+\newcommand{\Exx}[2]{{{\bf E}_{#1}}{\left[#2\right]}}
 \newcommand{\var}[1]{{\bf var} \hspace{-2pt} \left(#1\right)}
 \newcommand{\varr}[1]{{\bf var}\left(#1\right)}
 \newcommand{\varx}[1]{\mathop{\bf var}\left(#1\right)}
